@@ -3,7 +3,7 @@ import oct8 from "../Oct8/Oct8.js"
 class YeboxEngine{
     _oct8 = new oct8()
     Questions_save =[]
-    Theme = {SkyTheme:"sky",DarkTheme:"dark",WhiteTheme:"white",HelloTheme:"pink",YeTheme:"yellow",starndartTheme:"standart",GreenTheme:"green"}
+    Theme = {SkyTheme:"sky",DarkTheme:"dark",WhiteTheme:"white",HelloTheme:"pink",YeTheme:"yellow",starndartTheme:"standart",GreenTheme:"green",TemaCinza:"gray"}
     CreateBasicTags(){
         this._oct8.createNewTag("rabbit","<img src='../../../img/08b4246c864362eec7d6eea89963f1e2cd0d8471_hq.gif' height='90'>")
         this._oct8.createNewTag("fox","<img src='../../../img/3IsJ.gif' height='90'>")
