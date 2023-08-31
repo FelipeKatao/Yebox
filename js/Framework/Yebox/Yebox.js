@@ -18,7 +18,6 @@ class YeboxEngine{
                 this.Questions_save.push(document.getElementById("qt_input").value)
                 document.getElementById("QuestioN-bx").remove()
             })
-            console.log("opa")
         })
         this._oct8.ReactiveTags("SandBox")
     }
