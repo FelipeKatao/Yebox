@@ -3,6 +3,7 @@ import oct8 from "../Oct8/Oct8.js"
 class YeboxEngine{
     _oct8 = new oct8()
     Questions_save =[]
+    _colorSystem = ""
     Theme = {SkyTheme:"sky",DarkTheme:"dark",WhiteTheme:"white",HelloTheme:"pink",YeTheme:"yellow",starndartTheme:"standart",GreenTheme:"green",TemaCinza:"gray"}
     CreateBasicTags(){
         this._oct8.createNewTag("rabbit","<img src='../../../img/08b4246c864362eec7d6eea89963f1e2cd0d8471_hq.gif' height='90'>")
@@ -10,10 +11,11 @@ class YeboxEngine{
         this._oct8.createNewTag("tree","<img src='../../../img/Tree.png' height='320'>")
         this._oct8.createNewTag("ghost","<img src='../../../img/monster.gif' height='50'>")
         this._oct8.createNewTag("grass","<img src='../../../img/grass.png' height='100'>")
-        this._oct8.createNewTag("card","<div id='card' class='card'></div>")
+        this._oct8.createNewTag("cloud","<img src='../../../img/clouds.png' height='100'>")
+        this._oct8.createNewTag("card","<div  class='card "+this._colorSystem+" '></div>")
         this._oct8.createNewTag("question",()=>{
-            document.getElementById("SandBox").innerHTML+="<div id='QuestioN-bx' class='blackRole'></div>"
-            document.getElementById("QuestioN-bx").innerHTML+="<div class='qt_0'><input id='qt_input' type='text'><button id='qt_0_3'>Send</button></div>"
+            document.getElementsByTagName("question")[0].innerHTML+="<div id='QuestioN-bx' class='blackRole'></div>"
+            document.getElementById("QuestioN-bx").innerHTML+="<div class='qt_0'><h1></h1><input id='qt_input' type='text'><button id='qt_0_3'>Send</button></div>"
             document.getElementById("qt_0_3").addEventListener("click",()=>{
                 this.Questions_save.push(document.getElementById("qt_input").value)
                 document.getElementById("QuestioN-bx").remove()
@@ -27,6 +29,10 @@ class YeboxEngine{
 
     ModifyW(Element,height="10vh"){
         Element.style.width = height
+    }
+
+    ModifyW(Element,Color="red"){
+        Element.backgroundColor.width = Color
     }
     MoveObject(ObjectName="IdName",position="10vh",Axis="X"){
         let Obj = document.getElementById(ObjectName)
@@ -53,10 +59,13 @@ class YeboxEngine{
     }
     AlterTheme(Theme){
         document.getElementById("SandBox").className=Theme
+       
     }
     AlterThemeSystem(Theme)
     {
         document.body.className+=" "+Theme+" noneBorder"
+        this._colorSystem = Theme
+
     }
     ClearSandBox(){
         document.getElementById("SandBox").innerHTML=""
