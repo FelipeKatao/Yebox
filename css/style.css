@@ -70,10 +70,10 @@ footer{
 .sky{background-color: #a2ffff; border:#212066 solid 0.4vh;color:#212066}
 .dark{background-color: #2c2c2c;border:#868686 solid 0.4vh;color:#a8a8a8}
 .pink{background-color: #fd7ed7;border:#8d026a solid 0.4vh;color:#ffc0f5}
-.white{background-color: #fff4fc;border:#8a8a8a solid 0.4vh;color:#3b3b3b}
+.white{background-color: #ffffff;border:#8a8a8a solid 0.4vh;color:#3b3b3b}
 .green{background-color: #97f031;border:#157535 solid 0.4vh;color:#268114}
 .gray{background-color: #818181cc; border: black dotted 0.5vh; color: black;}
+/* YOUR THEMES */
 
+/* END THEMES */
 .noneBorder{border: none;}
-
-.Terreno{background-color: #006d24;border: none;}
